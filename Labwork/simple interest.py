@@ -1,10 +1,13 @@
 #calculating simple interest of a program and validating the input
 principal=int(input("Enter the principal amount:"))
+if principal<0:
+    exit("Principal amount cannot be negative")
 rate=float(input("Enter the rate of interest:"))
+if rate<0:
+    exit("Rate of interest cannot be negative")
 time=int(input("Enter the time in years:"))
-#validating the input
-if principal<0 or rate<0 or time<0:
-    exit("Principal, rate and time cannot be negative")
+if time<0:
+    exit("Time cannot be negative")
 
 #calculating simple interest
 simple_interest=(principal*rate*time)/100
