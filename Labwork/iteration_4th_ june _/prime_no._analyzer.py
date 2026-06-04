@@ -8,7 +8,7 @@ elif num == 0 or num == 1:
     print(num, "is not a prime number.")
 #verifying whether prime or not
 if num > 1:
-    for i in range(2, num):
+    for i in range(2, num//2 + 1):
         if (num % i) == 0:
             print(num, "is not a prime number")
             print("Factors of", num, "are:")
@@ -19,3 +19,4 @@ if num > 1:
             break
     else:
         print(num, "is a prime number")
+        
