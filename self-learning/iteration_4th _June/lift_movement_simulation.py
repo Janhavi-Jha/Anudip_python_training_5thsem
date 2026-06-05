@@ -12,3 +12,4 @@ while True:
     current_floor = destination_floor
 print(f"Total Travelled: {total_floors_travelled} floors")
 
+ 
