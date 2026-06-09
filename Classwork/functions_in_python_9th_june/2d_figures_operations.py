@@ -6,11 +6,17 @@ until the user selects the option to exit from that figure.'''
 #importing the file
 from figuresmodule import *
 #taking input for figures
-figures = int(input("Enter your desired shape=\n1.Rectangle\n2.Square\n3.Circle\n"))
-#taking input for operation
-operation = int(input("Enter operation:\n1.Area\n2.Perimeter\n"))
-#performing operation for rectangle
-if figures == 1:
+while True:
+ figures = int(input("Enter your desired shape=\n1.Rectangle\n2.Square\n3.Circle\n4.Exit"))
+ if figures>4:
+    print("Invalid Input")
+    break
+ if figures==4:
+    exit("Program ended")
+ #taking input for operation
+ operation = int(input("Enter operation:\n1.Area\n2.Perimeter\n"))
+ #performing operation for rectangle
+ if figures == 1:
     #taking data input
     length = float(input("Enter length: "))
     breadth = float(input("Enter breadth: "))
@@ -22,20 +28,20 @@ if figures == 1:
     elif operation == 2:
         perimeter = rectangle_perimeter(length, breadth)
         print("Perimeter =", perimeter)
-#performing operation for square
-elif figures == 2:
+ #performing operation for square
+ elif figures == 2:
     #taking data input
     side = float(input("Enter side: "))
-#area calculation
+ #area calculation
     if operation == 1:
         area = square_area(side)
         print("Area =", area)
-#perimeter calculation
+ #perimeter calculation
     elif operation == 2:
         perimeter = square_perimeter(side)
         print("Perimeter =", perimeter)
 #performing operation on circle
-elif figures == 3:
+ elif figures == 3:
     #data inpput
     radius = float(input("Enter radius: "))
 #area calculation
@@ -46,6 +52,3 @@ elif figures == 3:
     elif operation == 2:
         perimeter = circle_perimeter(radius)
         print("Perimeter =", perimeter)
-#data validation
-else:
-    print("Give correct input")
