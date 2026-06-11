@@ -68,16 +68,6 @@ if seat_no in seats:
 else:
     print("Invalid seat number")
 
-# 5. Store updated reservation status in reservations.txt
-file = open("reservations.txt", "w")#opeing reservations.txt for write operation
-
-for seat, status in seats.items():
-    file.write(f"Seat {seat}: {status}")
-
-file.close()
-
-print("Updated reservation status saved to reservations.txt")
-
 # 6. Display occupancy percentage
 booked = 0
 
