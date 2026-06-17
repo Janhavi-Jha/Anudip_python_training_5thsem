@@ -1,4 +1,5 @@
 #A teacher is recording attendance of students enter the classroom.The class strength is 30students.Wap that counts the o. of students entering the students and displays the attendance count until all 30 students are present.
+#attendance count variable
 attendance_count=0
 while attendance_count<30:
     if attendance_count<30: 
